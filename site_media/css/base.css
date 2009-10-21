@@ -1,0 +1,162 @@
+body {
+    background-color: #FFF;
+    margin: 0;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 10pt;
+}
+html, body {
+    height: 100%;
+}
+a, a:visited {
+    color: #13C;
+    text-decoration: none;
+}
+a:hover	{
+    text-decoration: underline;
+}
+p   {
+    margin: 0px;
+    padding: 0px;
+}
+img {
+    border: 0;
+}
+dt {
+    font-weight: bold;
+}
+#body {
+    clear: both;
+    margin: 0 auto;
+    padding: 10px;
+    width: 800px;
+}
+#footer {
+    color: #999; /* footer text colour */
+    margin: 50px auto;
+    padding: 10px;
+    clear: both;
+    width: 800px;
+}
+#footer a, #footer a:visited {
+    color: #444; /* footer link colour */
+}
+#footer a:hover {
+    color: #777; /* footer link hover colour */
+}
+h1, h3, h4 {
+    margin: 0;
+}
+h1  {
+    font-size: 160%;
+}
+#tabhead {
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    height: 100px;
+    padding: 25px 0px 0px 0px;
+}
+#tabhead .logo {
+    height: 100px;
+    padding-left: 220px;
+    padding-top: 0;
+}
+#tabhead .logo img {
+    width: 200px;
+    height: 100px;
+}
+#tabhead .login {
+    position: absolute;
+    top: 0px;
+    right: 235px;
+    color: #13C;
+    padding-top: 10px;
+}
+#subnav {
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ddd;
+    background-color: #f5f5f5;
+}
+/* reference:
+ *   http://www.positioniseverything.net/easyclearing.html
+ *   http://www.zeldman.com/2006/10/27/ie7fixes1/
+ *      comment by michael on 10/28/2006
+ */
+.clearfix {
+    min-height: 1%;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+/* hides from ie5-mac \*/
+* html .clearfix { height: 1%; }
+/* end hide from ie5-mac */
+
+.padtop {
+    margin-top: 20px;
+}
+.clear-float    {
+    float: none;
+    clear: both;
+}
+#ajax-loading   {
+    margin: 5px 0 5px 230px;
+}
+#tabs	{
+    background-color: #fff;
+}
+
+
+#quote-actions	{
+    padding: 10px;
+}
+.notices    {
+    border: solid 1px #ddd;
+    background-color: #f5f5f5;
+    padding: 5px;
+}
+
+/* Generic widget */
+.left {
+    float: left;
+}
+.right  {
+    float: right;
+}
+.widget	{
+    background-color: #f0f8ff;
+    padding: 15px;
+}
+
+
+/* Create a central class for info divs. Preferably, they should have a slightly deeper color and hidable. Font-size should be greater.*/
+#msger	{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    text-align: left;
+    border-bottom: solid 2px #ddd;
+    display: none;
+    background-color: #f0f8ff;
+}
+#msger p    {
+    margin: 0px 0px 0px 230px;
+    line-height: 2em;
+    font-size: 125%;
+}
+#quote-info {
+    margin-bottom: 20px;
+    display: none;
+}
+.info	{
+    margin-bottom: 30px;
+}
+.info p	{
+    font-size: 125%;
+    line-height: 1.5em;
+}
