@@ -1,1 +1,26 @@
 {% extends "accesscard/base.html" %}
+
+{% block page_js %}
+    <script type="text/javascript">
+	$(function()	{
+	    $("#msger").ajaxStart(function()	{
+		$(this).slideDown("fast");
+	    });
+	});
+    </script>
+{% endblock %}
+
+{% block main %}
+    <form id="login" class="left widget">
+	<fieldset>
+	    <legend>Log In</legend>
+	    <ol>
+		{% for field in form %}
+		    <li>{{ field.label_tag }}{{ field }}</li>
+		{% endfor %}
+		<li><label></label><input type="button" value="Log In" onClick="login()" /></li>
+	    </ol>
+	    {% url account.views.password_reset as pwd_reset_url %}
+	</fieldset>
+    </form>
+{% endblock %}
