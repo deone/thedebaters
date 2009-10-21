@@ -1,6 +1,27 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-def login(request, template="accesscard/login.html"):
+from accesscard.forms import LoginForm
+from thedebaters import helpers as h
 
-    return render_to_response(template, {}, context_instance=RequestContext(request))
+def dict_error(errors):#{{{
+    error_dict = {}
+    keys = []
+
+    for k, v in errors:
+        error_dict[k] = v
+        keys.append(k)
+
+    if keys != ["__all__"]:
+        error_dict["keys"] = keys
+
+    return error_dict#}}}
+
+@h.json_response
+def login(request, form_class=LoginForm, template="accesscard/login.html", **kwargs):
+
+    form = form_class()
+
+    return render_to_response(template, {
+	"form": form,
+    }, context_instance=RequestContext(request))
