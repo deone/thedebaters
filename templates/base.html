@@ -3,21 +3,22 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>The Debaters : {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/site_media/css/960.css"/>
-    <link rel="stylesheet" href="/site_media/css/text.css"/>
-    <link rel="stylesheet" href="/site_media/css/reset.css"/>
+    <link rel="stylesheet" href="/site_media/css/960/reset.css"/>
+    <link rel="stylesheet" href="/site_media/css/960/text.css"/>
+    <link rel="stylesheet" href="/site_media/css/960/960.css"/>
     <link rel="stylesheet" href="/site_media/css/base.css"/>
     {% block custom_css %}{% endblock %}
     {% block custom_js %}{% endblock %}
 </head>
 <body>
-    <div id="wrapper">
+    <div id="wrapper" class="container_12">
 	<div id="header">
-	    <div id="logo_box">
-		<div id="logo"></div>
-		<div id="menu"></div>
-	    </div>
+	    <div id="logo-shadow" class="grid_4 shadow absolute"></div>
+	    <div id="logo" class="grid_4 header_item absolute"></div>
+	    <div id="menu-shadow" class="grid_4 absolute shadow"></div>
+	    <div id="menu" class="grid_4 header_item absolute"></div>
 	</div>
+	
 	<div id="main"></div>
 	<div id="sidebar">
 	    <div id="sidebar_head"></div>
