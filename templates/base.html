@@ -3,40 +3,26 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>The Debaters : {% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="/site_media/css/960.css"/>
+    <link rel="stylesheet" href="/site_media/css/text.css"/>
+    <link rel="stylesheet" href="/site_media/css/reset.css"/>
     <link rel="stylesheet" href="/site_media/css/base.css"/>
-    <link rel="stylesheet" href="/site_media/css/forms.css"/>
-    <link rel="stylesheet" href="/site_media/css/tables.css"/>
     {% block custom_css %}{% endblock %}
-    <script type="text/javascript" src="/site_media/js/jquery/js/jquery.js"></script>
-    <script type="text/javascript" src="/site_media/js/jquery/js/jquery-ui.js"></script>
-    <script type="text/javascript" src="/site_media/js/main.js"></script>
     {% block custom_js %}{% endblock %}
 </head>
 <body>
-    <div id="tabhead">
-	<div class="logo"><a href="http://www.thedebaters-ng.com" target="blank"><img src=""/></a></div>
-	<div class="login">
-	    {% if user.is_authenticated %}
-		<b>{{ user }}</b> | <a href="">Account</a> | 
-		{% if user.is_staff %}
-		    <a href="/admin/">Admin</a> | 
-		{% endif %}
-		<a href="">Logout</a>
-	    {% else %}
-		<a href=""><strong>Login with AccessCard</strong></a>
-	    {% endif %}
+    <div id="wrapper">
+	<div id="header">
+	    <div id="logo_box">
+		<div id="logo"></div>
+		<div id="menu"></div>
+	    </div>
 	</div>
-    </div>
-    <div id="msger">
-	<div id="ajax-loading">Loading, Please Wait...</div>
-    </div>
-    <div id="subnav" class="clearfix">&nbsp;</div>
-    <div id="body">
-	{% block body %}{% endblock %}
-    </div>
-    <div id="footer">
-	<div class="legal">
-	    &copy; 2009 <a href="">About</a> | <a href="">Terms of Service</a> | <a href="">Privacy Policy</a>
+	<div id="main"></div>
+	<div id="sidebar">
+	    <div id="sidebar_head"></div>
+	    <div id="sidebar_main"></div>
+	    <div id="footer"></div>
 	</div>
     </div>
 </body>
