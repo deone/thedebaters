@@ -7,5 +7,6 @@ class AccessCard(models.Model):
     def __unicode__(self):
 	return u"%s, %s" % (self.serial_no, self.pin)
 
-    class Meta:
-	verbose_name = "Access Card"
+    def check_serial_no(self, raw_serial_no):
+	is_correct = (self.serial_no == raw_serial_no)
+	return is_correct

@@ -1,10 +1,10 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 
-from accesscard.forms import LoginForm
+from accesscard.forms import AccessForm
 from thedebaters import helpers as h
 
-def dict_error(errors):#{{{
+def dict_error(errors):
     error_dict = {}
     keys = []
 
@@ -15,13 +15,18 @@ def dict_error(errors):#{{{
     if keys != ["__all__"]:
         error_dict["keys"] = keys
 
-    return error_dict#}}}
+    return error_dict
 
 @h.json_response
-def login(request, form_class=LoginForm, template="accesscard/login.html", **kwargs):
+def login(request, form_class=AccessForm, template="accesscard/login.html", **kwargs):
+    if request.method == "POST":
+	form = form_class(request.POST)
 
-    form = form_class()
+	print form.is_valid()
 
-    return render_to_response(template, {
-	"form": form,
-    }, context_instance=RequestContext(request))
+    else:
+	form = form_class()
+
+	return render_to_response(template, {
+	    "form": form,
+	}, context_instance=RequestContext(request))
