@@ -8,6 +8,7 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     (r"^$", include("accesscard.urls")),
+    (r"^register$", include("ziphon.urls")), # direct to ziphon in the mean time, we'll direct to accesscard when its ready.
     (r"^admin/(.*)", admin.site.root),
 )
 

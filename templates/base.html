@@ -1,30 +1,26 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title>The Debaters : {% block title %}{% endblock %}</title>
-    <link rel="stylesheet" href="/site_media/css/960/reset.css"/>
-    <link rel="stylesheet" href="/site_media/css/960/text.css"/>
-    <link rel="stylesheet" href="/site_media/css/960/960.css"/>
-    <link rel="stylesheet" href="/site_media/css/base.css"/>
-    {% block custom_css %}{% endblock %}
-    {% block custom_js %}{% endblock %}
-</head>
-<body>
-    <div id="wrapper" class="container_12">
-	<div id="header">
-	    <div id="logo-shadow" class="grid_4 shadow absolute"></div>
-	    <div id="logo" class="grid_4 header_item absolute"></div>
-	    <div id="menu-shadow" class="grid_4 absolute shadow"></div>
-	    <div id="menu" class="grid_4 header_item absolute"></div>
-	</div>
-	
-	<div id="main"></div>
-	<div id="sidebar">
-	    <div id="sidebar_head"></div>
-	    <div id="sidebar_main"></div>
+    <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<title>The Debaters &mdash; Registration</title>
+	<link rel="stylesheet" href="/site_media/css/reset.css" media="screen"/>
+	<link rel="stylesheet" href="/site_media/css/text.css" media="screen"/>
+	<link rel="stylesheet" href="/site_media/css/960.css" media="screen"/>
+	<link rel="stylesheet" href="/site_media/css/layout.css" media="screen"/>
+	<link rel="stylesheet" href="/site_media/css/base.css" media="screen"/>
+    </head>
+    <body>
+	<div id="wrapper" class="container_12">
+	    <div id="header">
+		<div id="logo-shadow" class="grid_4 shadow absolute"></div>
+		<div id="logo" class="grid_4 header_item absolute"></div>
+		<div id="menu-shadow" class="grid_4 absolute shadow"></div>
+		<div id="menu" class="grid_4 header_item absolute"></div>
+	    </div>
+	    {% block content %}{% endblock %}
 	    <div id="footer"></div>
+	    
 	</div>
-    </div>
-</body>
+    </body>
+    <script src="/site_media/js/jquery.js"></script>
 </html>
