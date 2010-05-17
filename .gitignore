@@ -4,6 +4,7 @@ dist
 *.beam
 *.pyc
 *.swp
+*.swo
 *.egg-info
 .coverage
 *~
