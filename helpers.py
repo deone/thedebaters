@@ -51,3 +51,9 @@ def create_response(code, type=None, value=None):#{{{
                    }
 
     return simplejson.dumps(response, cls=LazyEncoder)#}}}
+
+def dict_error(errors):
+    error_dict = dict([(k, str(v)) for k, v in errors])
+    error_dict["keys"] = error_dict.keys()
+
+    return ("error", error_dict)

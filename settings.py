@@ -82,3 +82,5 @@ INSTALLED_APPS = (
     'thedebaters.accesscard',
     'thedebaters.ziphon',
 )
+
+PARTICIPANT_AGE_LIMIT = 30

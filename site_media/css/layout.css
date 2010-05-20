@@ -435,7 +435,7 @@ fieldset.login p {
 fieldset p label {
 	width:98%;
 }
-fieldset p input {
+fieldset p input, fieldset p textarea	{
 	width:98%;
 }
 fieldset p select {
